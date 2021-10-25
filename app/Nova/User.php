@@ -2,6 +2,7 @@
 
 namespace App\Nova;
 
+use Acme\ColorPicker\ColorPicker;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\ID;
@@ -60,6 +61,10 @@ class User extends Resource
                 ->onlyOnForms()
                 ->creationRules('required', 'string', 'min:8')
                 ->updateRules('nullable', 'string', 'min:8'),
+
+            ColorPicker::make('Color', function () {
+                return '#000';
+            }),
         ];
     }
 

@@ -4,8 +4,44 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d2f55d8d328714421b49a1513bbc1149",
+    "content-hash": "32dbdda771128870d8b1fdffbbb8aa87",
     "packages": [
+        {
+            "name": "acme/color-picker",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./nova-components/ColorPicker",
+                "reference": "f2a150c2a12ffa59b13393e985abcb3f949dd878"
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Acme\\ColorPicker\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Acme\\ColorPicker\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova field.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
         {
             "name": "asm89/stack-cors",
             "version": "v2.0.3",
